@@ -6,6 +6,7 @@ import (
 
 	"github.com/docker-slim/docker-slim/pkg/app"
 	"github.com/docker-slim/docker-slim/pkg/app/master/commands"
+	"github.com/docker-slim/docker-slim/pkg/app/master/commands/backend"
 	"github.com/docker-slim/docker-slim/pkg/app/master/commands/build"
 	"github.com/docker-slim/docker-slim/pkg/app/master/commands/containerize"
 	"github.com/docker-slim/docker-slim/pkg/app/master/commands/convert"
@@ -51,6 +52,8 @@ func registerCommands() {
 	server.RegisterCommand()
 	debug.RegisterCommand()
 	containerize.RegisterCommand()
+
+	backend.RegisterCommand()
 }
 
 func newCLI() *cli.App {
