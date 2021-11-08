@@ -132,6 +132,10 @@ const (
 	FlagContainerDNSSearch = "container-dns-search"
 	FlagMount              = "mount"
 	FlagDeleteFatImage     = "delete-generated-fat-image"
+
+	//Backend Flag
+	FlagBackendEnable  = "backend-on"
+	FlagBackendDisable = "backend-off"
 )
 
 // Shared command flag usage info
@@ -291,6 +295,14 @@ func GlobalFlags() []cli.Flag {
 		cli.BoolFlag{
 			Name:  FlagNoColor,
 			Usage: FlagNoColorUsage,
+		},
+		cli.BoolFlag{
+			Name:  FlagBackendEnable,
+			Usage: "Enable Backend",
+		},
+		cli.BoolFlag{
+			Name:  FlagBackendDisable,
+			Usage: "Disable Backend",
 		},
 	}
 }
