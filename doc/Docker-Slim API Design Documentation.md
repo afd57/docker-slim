@@ -153,6 +153,19 @@ Run `build` command in docker-slim via restapi.
 - deleteFatImage bool
 
 
+**Example Request**:
+```json
+  Method: POST
+  Content-Type: application/json
+
+  {
+        "targetRef": "archlinux:latest",
+        "tag": "archlinux:curl",
+        "http-probe": false,
+        "exec": "curl checkip.amazonaws.com"
+
+  }
+```
 
 **Example response**:
 
@@ -191,11 +204,11 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "FatImage": "",
-  "FatImageSHA": "",
-  "SlimImage": "",
-  "SlimImageSHA": "",
-  "ExecutionTime": "",
+  "FatImage": "archlinux:latest",
+  "FatImageSHA": "90a961bc22",
+  "SlimImage": "archlinux:curl",
+  "SlimImageSHA": "1001257a",
+  "ExecutionTime": "1100",
   "Message": ""
 }
 ```
