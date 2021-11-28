@@ -32,6 +32,7 @@ require (
 	github.com/gorilla/websocket v1.4.2
 	github.com/gosuri/uilive v0.0.3 // indirect
 	github.com/hooklift/assert v0.0.0-20170704181755-9d1defd6d214 // indirect
+	github.com/jinzhu/gorm v1.9.16
 	github.com/klauspost/pgzip v1.2.4 // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mattn/go-tty v0.0.3 // indirect

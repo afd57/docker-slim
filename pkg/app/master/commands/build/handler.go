@@ -25,6 +25,7 @@ import (
 	"github.com/docker-slim/docker-slim/pkg/command"
 	"github.com/docker-slim/docker-slim/pkg/docker/dockerutil"
 	"github.com/docker-slim/docker-slim/pkg/report"
+	"github.com/docker-slim/docker-slim/pkg/util/dbutil"
 	"github.com/docker-slim/docker-slim/pkg/util/errutil"
 	"github.com/docker-slim/docker-slim/pkg/util/fsutil"
 	"github.com/docker-slim/docker-slim/pkg/util/printbuffer"
@@ -148,6 +149,7 @@ func OnCommand(
 	}
 
 	logger.Debugf("customImageTag='%s', additionalTags=%#v", customImageTag, additionalTags)
+	dbutil.InsertBuildImageResult()
 
 	client, err := dockerclient.New(gparams.ClientConfig)
 	if err == dockerclient.ErrNoDockerInfo {
