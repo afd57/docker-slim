@@ -3,9 +3,8 @@ package dbutil
 import (
 	"fmt"
 
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
-
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 type User struct {
@@ -34,5 +33,5 @@ func InitialMigration() {
 }
 
 func InsertBuildImageResult() {
-	fmt.Println("Test Result Log")
+	fmt.Println("Test Result Log.......................")
 }
